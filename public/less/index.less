@@ -44,23 +44,19 @@ a {
 .more {
 	.text-center;
 }
-.social-media-link {
-	.make-sm-column(3);
-	.make-xs-column(6);
-	.make-md-column(3);
-	.make-md-column-offset(0);
-}
 .links {
 	padding-top: 5%;
 	.text-center;
-	.container-fluid;
-	width: 90%;
-	margin-right: auto;
-	margin-left: auto;
+  .make-row();
+	// width: 90%;
+	// margin-right: auto;
+	// margin-left: auto;
 
 	.links-list {
-		.make-row();
+		// .make-row();
 		padding-top: 5%;
+    // .make-row();
+    .make-xs-column(12);
 
 		li {
 			.make-xs-column(3);
@@ -99,7 +95,8 @@ li:hover {
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: @screen-md-min) {
 	.links {
-		width: 80%;
+		// width: 80%;
+    width: 100%;
 	}
 }
 footer {

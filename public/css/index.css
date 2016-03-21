@@ -6478,8 +6478,6 @@ body:after,
 .presentation-container:after,
 .links:before,
 .links:after,
-.links .links-list:before,
-.links .links-list:after,
 footer:before,
 footer:after,
 .info:before,
@@ -6506,7 +6504,6 @@ footer:after,
 body:after,
 .presentation-container:after,
 .links:after,
-.links .links-list:after,
 footer:after,
 .info:after {
   clear: both;
@@ -6828,56 +6825,20 @@ a {
 .more {
   text-align: center;
 }
-.social-media-link {
-  float: left;
-  width: 50%;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-@media (min-width: 768px) {
-  .social-media-link {
-    float: left;
-    width: 25%;
-  }
-}
-@media (min-width: 992px) {
-  .social-media-link {
-    float: left;
-    width: 25%;
-  }
-}
-@media (min-width: 992px) {
-  .social-media-link {
-    margin-left: 0%;
-  }
-}
 .links {
   padding-top: 5%;
   text-align: center;
-  padding-left: 15px;
-  padding-right: 15px;
-  width: 90%;
-  margin-right: auto;
-  margin-left: auto;
-}
-.links > .navbar-header,
-.links > .navbar-collapse {
-  margin-right: -15px;
   margin-left: -15px;
-}
-@media (min-width: 768px) {
-  .links > .navbar-header,
-  .links > .navbar-collapse {
-    margin-right: 0;
-    margin-left: 0;
-  }
+  margin-right: -15px;
 }
 .links .links-list {
-  margin-left: -15px;
-  margin-right: -15px;
   padding-top: 5%;
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .links .links-list li {
   position: relative;
@@ -6917,7 +6878,7 @@ li:hover a .fa.fa-linkedin {
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .links {
-    width: 80%;
+    width: 100%;
   }
 }
 footer {
