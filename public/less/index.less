@@ -13,6 +13,7 @@ body {
 	background-color: @matteBlack;
 	color: @textColor;
 	font-weight: 200;
+  overflow: hidden;
 }
 a {
 	color: @lightBlue;
@@ -23,8 +24,7 @@ a {
 }
 .presentation {
 	padding-top: 10%;
-	.make-md-column(8);
-	.make-md-column-offset(2);
+	.make-xs-column(12);
 }
 .profile-pic {
 	.img-circle;
@@ -68,7 +68,7 @@ a {
           &:hover { text-decoration: none; }
 
           span {
-            visibility: hidden;
+            display: none;
           }
 			}
 		}
@@ -124,6 +124,10 @@ footer {
 }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: @screen-md-min) {
+  .presentation {
+    .make-md-column(8);
+  	.make-md-column-offset(2);
+  }
   .name {
     font-size: 50px;
   }
