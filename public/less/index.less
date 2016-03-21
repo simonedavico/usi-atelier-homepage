@@ -1,0 +1,118 @@
+@import "bootstrap/less/bootstrap.less";
+@import "fontfaces.less";
+@import "mixins.less";
+
+@lightBlue: #25b5f1;
+@matteBlack: #141414;
+@textColor: white;
+@stackOverflowOrange: rgb(231, 153, 0);
+
+body {
+	.container-fluid;
+	background-color: @matteBlack;
+	color: @textColor;
+	font-weight: 200;
+}
+a {
+	color: @lightBlue;
+	text-decoration: none;
+}
+.presentation-container {
+	.make-row();
+}
+.presentation {
+	padding-top: 10%;
+	.make-md-column(8);
+	.make-md-column-offset(2);
+}
+.profile-pic {
+	.img-circle;
+	.img-responsive;
+	.square(150);
+	margin-left: auto;
+	margin-right: auto;
+}
+.name {
+	.text-center;
+	font-family: 'Signerica Medium', Helvetica, sans-serif;
+	font-size: 50px;
+}
+.about {
+	.text-center;
+	font-weight: 500;
+}
+.more {
+	.text-center;
+}
+.social-media-link {
+	.make-sm-column(3);
+	.make-xs-column(6);
+	.make-md-column(3);
+	.make-md-column-offset(0);
+}
+.links {
+	padding-top: 5%;
+	.text-center;
+	.container-fluid;
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+
+	.links-list {
+		.make-row();
+		padding-top: 5%;
+
+		li {
+			.make-xs-column(3);
+			list-style: none;
+			-webkit-transition: all 0.3s ease-in;
+
+			a .fa {
+					color: darken(white, 15%);
+			}
+		}
+	}
+}
+li:hover {
+	.transition(all 0.3s ease-in);
+	.transform(rotateY(360deg););
+
+	a .fa {
+
+		&.fa-github {
+			color: white;
+		}
+
+		&.fa-stack-overflow {
+			color: @stackOverflowOrange;
+		}
+
+		&.fa-codepen {
+			color: white;
+		}
+
+		&.fa-linkedin {
+			color: rgb(30,136,189);
+		}
+	}
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+	.links {
+		width: 80%;
+	}
+}
+footer {
+  .make-row();
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.info {
+  .container;
+  .text-center;
+  font-size: 12px;
+  padding-bottom: 5px;
+  color: darken(@textColor, 50%);
+}
