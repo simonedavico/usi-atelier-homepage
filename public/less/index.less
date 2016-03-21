@@ -1,4 +1,5 @@
 @import "bootstrap/less/bootstrap.less";
+@import "font-awesome/less/font-awesome.less";
 @import "fontfaces.less";
 @import "mixins.less";
 
@@ -28,14 +29,14 @@ a {
 .profile-pic {
 	.img-circle;
 	.img-responsive;
-	.square(150);
+	.square(100);
 	margin-left: auto;
 	margin-right: auto;
 }
 .name {
 	.text-center;
 	font-family: 'Signerica Medium', Helvetica, sans-serif;
-	font-size: 50px;
+	font-size: 30px;
 }
 .about {
 	.text-center;
@@ -48,14 +49,10 @@ a {
 	padding-top: 5%;
 	.text-center;
   .make-row();
-	// width: 90%;
-	// margin-right: auto;
-	// margin-left: auto;
 
-	.links-list {
-		// .make-row();
+  .links-list {
+
 		padding-top: 5%;
-    // .make-row();
     .make-xs-column(12);
 
 		li {
@@ -63,40 +60,53 @@ a {
 			list-style: none;
 			-webkit-transition: all 0.3s ease-in;
 
-			a .fa {
-					color: darken(white, 15%);
+			a {
+          .fa;
+          .fa-fw;
+          .fa-3x;
+          color: darken(white, 15%);
+          &:hover { text-decoration: none; }
+
+          span {
+            visibility: hidden;
+          }
 			}
 		}
 	}
+}
+.github:before {
+    content: @fa-var-github;
+}
+.stack-overflow:before {
+  content: @fa-var-stack-overflow;
+}
+.codepen:before {
+  content: @fa-var-codepen;
+}
+.linkedin:before {
+  content: @fa-var-linkedin;
 }
 li:hover {
 	.transition(all 0.3s ease-in);
 	.transform(rotateY(360deg););
 
-	a .fa {
+	a {
 
-		&.fa-github {
+		&.github {
 			color: white;
 		}
 
-		&.fa-stack-overflow {
+		&.stack-overflow {
 			color: @stackOverflowOrange;
 		}
 
-		&.fa-codepen {
+		&.codepen {
 			color: white;
 		}
 
-		&.fa-linkedin {
+		&.linkedin {
 			color: rgb(30,136,189);
 		}
-	}
-}
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: @screen-md-min) {
-	.links {
-		// width: 80%;
-    width: 100%;
 	}
 }
 footer {
@@ -105,11 +115,29 @@ footer {
   bottom: 0;
   width: 100%;
 }
-
 .info {
   .container;
   .text-center;
   font-size: 12px;
   padding-bottom: 5px;
   color: darken(@textColor, 50%);
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+  .name {
+    font-size: 50px;
+  }
+  .profile-pic {
+    .square(150);
+  }
+	.links {
+    width: 100%;
+
+    .links-list {
+
+      li > a {
+        .fa-4x;
+      }
+    }
+	}
 }
