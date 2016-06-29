@@ -8845,7 +8845,6 @@ footer:after,
 }
 /* Useful mixins */
 body {
-  overflow: hidden;
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
@@ -8853,6 +8852,14 @@ body {
   background-color: #141414;
   color: white;
   font-weight: 200;
+  overflow: hidden;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 body > .navbar-header,
 body > .navbar-collapse {
@@ -8866,7 +8873,20 @@ body > .navbar-collapse {
     margin-left: 0;
   }
 }
+body div,
+body footer {
+  z-index: 1000;
+  pointer-events: none;
+}
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
 a {
+  pointer-events: auto;
   color: #25b5f1;
   text-decoration: none;
 }
@@ -8981,6 +9001,9 @@ li:hover {
   -webkit-transform: rotateY(360deg);
   -ms-transform: rotateY(360deg);
   transform: rotateY(360deg);
+}
+li:hover a {
+  display: block;
 }
 li:hover a.github {
   color: white;

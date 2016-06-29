@@ -14,8 +14,29 @@ body {
 	color: @textColor;
 	font-weight: 200;
   overflow: hidden;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  div, footer {
+    z-index: 1000;
+    pointer-events:none;
+  }
+
+}
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 a {
+  pointer-events: auto;
 	color: @lightBlue;
 	text-decoration: none;
 }
@@ -91,6 +112,8 @@ li:hover {
 	.transform(rotateY(360deg););
 
 	a {
+
+    display: block;
 
 		&.github {
 			color: white;
