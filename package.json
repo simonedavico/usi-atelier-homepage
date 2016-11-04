@@ -14,7 +14,7 @@
     "url": "git+https://github.com/simonedavico/usi-atelier-homepage.git"
   },
   "author": "Simone D'Avico <simonedavico@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/simonedavico/usi-atelier-homepage/issues"
   },
