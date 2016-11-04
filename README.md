@@ -1,6 +1,6 @@
 # usi-atelier-homepage
 
-Personal homepage, developed to experiment with:\
+Personal homepage, developed to experiment with:
 - `npm`
 - `bootstrap` LESS sources
 - `font-awesome` LESS sources
