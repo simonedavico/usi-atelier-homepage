@@ -1,2 +1,3 @@
-public/css
-public/js/load-particles-min.js
+dist
+node_modules
+.DS_Store

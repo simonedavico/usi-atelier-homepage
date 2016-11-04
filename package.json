@@ -1,0 +1,30 @@
+{
+  "name": "simonedavico-personal-page",
+  "version": "1.0.0",
+  "description": "Personal Page for Simone D'Avico",
+  "main": "index.js",
+  "scripts": {
+    "uglify": "uglifyjs js/load-particles.js --screw-ie8 -o dist/load-particles-min.js",
+    "less": "lessc less/index.less dist/index.css",
+    "deploy": "npm run less && npm run uglify",
+    "clean": "rm -r node_modules && rm -r dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonedavico/usi-atelier-homepage.git"
+  },
+  "author": "Simone D'Avico <simonedavico@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simonedavico/usi-atelier-homepage/issues"
+  },
+  "homepage": "https://github.com/simonedavico/usi-atelier-homepage#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0"
+  },
+  "devDependencies": {
+    "less": "^2.7.1",
+    "uglify-js": "^2.7.4"
+  }
+}

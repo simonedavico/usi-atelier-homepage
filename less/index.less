@@ -1,5 +1,26 @@
-@import "bootstrap/less/bootstrap.less";
-@import "font-awesome/less/font-awesome.less";
+//Core bootstrap variables and mixins
+@import "../node_modules/bootstrap/less/variables.less";
+@import "../node_modules/bootstrap/less/mixins.less";
+
+// Bootstrap reset
+@import "../node_modules/bootstrap/less/normalize.less";
+
+// Bootstrap Core CSS
+@import "../node_modules/bootstrap/less/scaffolding.less";
+@import "../node_modules/bootstrap/less/type.less";
+//@import "../node_modules/bootstrap/less/code.less";
+@import "../node_modules/bootstrap/less/grid.less";
+
+// Bootstrap utility classes
+@import "../node_modules/bootstrap/less/utilities.less";
+@import "../node_modules/bootstrap/less/responsive-utilities.less";
+
+// Font Awesome
+@import "../node_modules/font-awesome/less/font-awesome.less";
+//override font-path for font-awesome according to where the compiled css will be saved
+@fa-font-path: "../node_modules/font-awesome/fonts";
+
+// Page imports
 @import "fontfaces.less";
 @import "mixins.less";
 
